@@ -1,0 +1,9 @@
+<div class="clearfix">
+  <div class="left">
+    <img class="portrait" src="images/senior-portrait.jpg">
+  </div>
+  <div class="right">
+    <h1 class="name">JP Addison</h1>
+    <p class="links"><a href="https://github.com/jpaddison3">github</a> - <a href="https://www.linkedin.com/in/jpaddison3">linkedin</a> - <a href="http://kairosaerospace.com/">kairos</a></p>
+  </div>
+</div>
