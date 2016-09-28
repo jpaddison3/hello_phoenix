@@ -1,0 +1,28 @@
+<h2>Unsong by Scott Alexander</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>most recent chapter</th>
+      <th>home url</th>
+      <th>file location</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for book <- @books do %>
+    <tr>
+      <td><%= book.id %></td>
+      <td><%= book.name %></td>
+      <td><%= book.most_recent_chapter %></td>
+      <td><%= book.home_url %></td>
+      <td><%= book.file_location %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<a href="books/unsong.mobi" download>Download</a>
