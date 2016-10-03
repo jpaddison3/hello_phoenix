@@ -1,61 +1,76 @@
 defmodule UnsongScraper do
-  @start "https://parahumans.wordpress.com/2011/06/11/1-1/"
-  # "https://parahumans.wordpress.com/category/stories-epilogue/interlude-end/"
-  @toc "https://parahumans.wordpress.com/table-of-contents/"
+  @toc "https://unsongbook.com"
+  @out "unsong.html"
 
   def main do
-    # scrape_next(@start, 0)
-    scrape_toc(@toc)
+    book_html = scrape_toc(@toc)
+    write_book(book_html, @out)
+    :ok
+  end
+
+  def read_book(file) do
+    File.read! file
   end
 
   def scrape_toc(link) do
     response = HTTPotion.get(link)
     html_tree = Floki.parse(response.body)
-    all_links =
-      html_tree
-      |> Floki.find(".entry-content")
-      |> Floki.find("a")
-    ch_links = find_ch_links(Enum.slice(all_links, 0..2))
+    ch_links = find_ch_links(html_tree)
     ch_texts = Enum.map(ch_links, &scrape_ch/1)
     ch_texts
   end
 
+  def write_book book_html, output do
+    file = File.open! output, [:write]
+    try do
+      IO.binwrite file, book_html
+      IO.puts(Process.info(file, :status))
+      # Todo learn enough about processes to figure out how to write
+      Process.sleep(1000)
+      IO.puts(Process.info(file, :status))
+    after
+      File.close file
+    end
+  end
+
   def scrape_ch(link) do
+    IO.puts "hi1"
+    IO.puts link
     response = HTTPotion.get(link)
     html_tree = Floki.parse(response.body)
+    IO.puts(html_tree)
     text = extract_text(html_tree)
-    text
+    slice_head(text)
   end
 
-  def find_ch_links(links_list) do
-    links_list_filtered = Enum.filter(links_list, fn x ->
-      Regex.match?(~R(https://parahumans.wordpress.com/.*), get_link_url2(x))
-    end)
-    Enum.map(links_list_filtered, &get_link_url2/1)
-  end
-
-  def get_link_url2(html_tree) do
-    link =
+  def find_ch_links(html_tree) do
+    all_links =
       html_tree
-      |> elem(1)
-      |> hd()
-      |> elem(1)
-    link
+      |> Floki.find(".pjgm-postcontent")
+      |> Floki.find("a")
+      |> Floki.filter_out(".share-.*")
+    all_links = Enum.slice(all_links, 0..2)
+    links_list_filtered =
+      all_links
+      |> Enum.map(&get_link_url/1)
+      |> Enum.filter(fn x ->
+          not Regex.match?(~R(\?share=), x) and
+          not Regex.match?(~R(vote.php\?for=), x)
+        end)
+    links_list_filtered
   end
 
-  def scrape_next(link, depth) do
-    response = HTTPotion.get(link)
-    phtml = Floki.parse(response.body)
-    text = extract_text(phtml)
-
-    next_chapter = Floki.find(phtml, "a[title=\"Next Chapter\"")
-    if next_chapter != [] and depth < 5 do
-      next_ch_link = get_link_url(next_chapter)
-      next_ch_text = scrape_next(next_ch_link, depth+1)
-      text <> next_ch_text
-    else
-      text
-    end
+  def get_link_url(href_tree) do
+    raw =
+      href_tree
+      |> Floki.raw_html()
+    match = Regex.named_captures(~r{"(?<link>https?://.*\..*|localhost:.*/.*)"}, raw)
+    link = 
+      case match do
+        %{"link" => l} -> l
+        _ -> ""
+      end
+    link
   end
 
   def extract_text(phtml) do
@@ -64,18 +79,6 @@ defmodule UnsongScraper do
     |> Floki.find("p")
     |> Floki.filter_out("a")
     |> Floki.raw_html()
-  end
-
-  def get_link_url(link_phtml) do
-    next_ch_link =
-      link_phtml
-      |> hd()
-      |> elem(1)
-      |> tl()
-      |> hd()
-      |> elem(1)
-    IO.puts(next_ch_link)
-    next_ch_link
   end
 
   def print_list(list) do

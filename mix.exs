@@ -39,7 +39,8 @@ defmodule HelloPhoenix.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:httpotion, "~> 3.0.0"},
-     {:floki, "~> 0.10.1"}]
+     {:floki, "~> 0.10.1"},
+     {:bypass, "~> 0.5", only: :test}]
   end
   # JP added httpotion
   # Aliases are shortcuts or tasks specific to the current project.
