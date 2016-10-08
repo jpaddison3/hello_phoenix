@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<title>Unsong</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="localhost:<%= bypass_port %>/wp-content/themes/pujugama/style.css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+<link rel='stylesheet' id='font-awesome-css'  href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css' type='text/css' media='all' />
+
+<link rel="pingback" href="localhost:<%= bypass_port %>/xmlrpc.php" />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s.gravatar.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Unsong &raquo; Feed" href="localhost:<%= bypass_port %>/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Unsong &raquo; Comments Feed" href="localhost:<%= bypass_port %>/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/unsongbook.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.1"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='social-logos-css'  href='localhost:<%= bypass_port %>/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='localhost:<%= bypass_port %>/wp-content/plugins/jetpack/css/jetpack.css?ver=4.1.1' type='text/css' media='all' />
+<script type='text/javascript' src='localhost:<%= bypass_port %>/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='localhost:<%= bypass_port %>/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='localhost:<%= bypass_port %>/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://unsongbook.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="localhost:<%= bypass_port %>/wp-includes/wlwmanifest.xml" /> 
+<link rel="canonical" href="localhost:<%= bypass_port %>/" />
+<link rel='shortlink' href='http://wp.me/P74GAT-7' />
+<link rel="alternate" type="application/json+oembed" href="localhost:<%= bypass_port %>/wp-json/oembed/1.0/embed?url=http%3A%2F%2Funsongbook.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="localhost:<%= bypass_port %>/wp-json/oembed/1.0/embed?url=http%3A%2F%2Funsongbook.com%2F&#038;format=xml" />
+
+			<!--/ Facebook Thumb Fixer Open Graph /-->
+			<meta property="og:type" content="article" />
+			<meta property="og:url" content="localhost:<%= bypass_port %>/" />
+			<meta property="og:title" content="Table of Contents" />
+			<meta property="og:description" content="" />
+			<meta property="og:site_name" content="Unsong" />
+			<meta property="og:image" content="localhost:<%= bypass_port %>/wp-content/uploads/2016/01/icon2.png" />
+
+			<meta itemscope itemtype="article" />
+			<meta itemprop="description" content="" />
+			<meta itemprop="image" content="localhost:<%= bypass_port %>/wp-content/uploads/2016/01/icon2.png" />
+			
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'>
+<link rel='dns-prefetch' href='//i0.wp.com'>
+<link rel='dns-prefetch' href='//i1.wp.com'>
+<link rel='dns-prefetch' href='//i2.wp.com'>
+<style type='text/css'>img#wpstats{display:none}</style><link rel="icon" href="http://i2.wp.com/unsongbook.com/wp-content/uploads/2015/12/cropped-icon2.png?fit=32%2C32" sizes="32x32" />
+<link rel="icon" href="http://i2.wp.com/unsongbook.com/wp-content/uploads/2015/12/cropped-icon2.png?fit=192%2C192" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://i2.wp.com/unsongbook.com/wp-content/uploads/2015/12/cropped-icon2.png?fit=180%2C180" />
+<meta name="msapplication-TileImage" content="http://i2.wp.com/unsongbook.com/wp-content/uploads/2015/12/cropped-icon2.png?fit=270%2C270" />
+</head>
+
+<body class="home page page-id-7 page-template-default">
+<div id="pjgm-wrap">
+	<div id="pjgm-header">
+		<div id="pjgm-menubar">
+			<a href="localhost:<%= bypass_port %>/" class="pjgm-home" title="Unsong" rel="home">Home</a>
+			<div class="menu-header"><ul id="menu-menu-1" class="menu"><li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-7 current_page_item menu-item-27"><a href="localhost:<%= bypass_port %>/">Table of Contents</a></li>
+<li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="localhost:<%= bypass_port %>/authors-notes/">Author&#8217;s Notes</a></li>
+</ul></div>			<span class="pjgm-ender"></span>
+			<a href="localhost:<%= bypass_port %>/comments/feed/" class="pjgm-feed">Comments Feed</a>
+			<a href="localhost:<%= bypass_port %>/feed/" class="pjgm-feed">RSS Feed</a>	
+		</div><!-- #pjgm-menubar -->					
+		
+		<div id="pjgm-bigtitle">
+						<h1 id="pjgm-title">
+				<img src=http://i.imgur.com/d9LvKMc.png alt="aleph symbol with title UNSONG" class="codex" />
+				<!-- mkeenan removed the title span 2015-12-27
+				<span>
+					<a href="localhost:<%= bypass_port %>/" title="Unsong" rel="home">Unsong</a>
+				</span> -->
+			</h1>
+			<div id="pjgm-description"></div>
+		</div><!-- #pjgm-bigtitle -->			
+	</div><!-- #pjgm-header -->
+
+	<div id="pjgm-main">
+		<div id="pjgm-box">
+			<div id="pjgm-content">
+
+
+				<div id="post-7" class="post-7 page type-page status-publish hentry">
+											<h2 class="pjgm-posttitle">Table of Contents</h2>
+					
+					<div class="pjgm-postcontent">
+						<blockquote><p>
+Jerusalem is builded as a city that is in the public domain.<br />
+<i>&#8212; kingjamesprogramming.tumblr.com</i>
+</p></blockquote>
+<p>(<A HREF="localhost:<%= bypass_port %>/prologue-2/">Prologue</A>)</p>
+<p><u><b>BOOK I<A HREF="localhost:<%= bypass_port %>/book-i-genesis/">:</A> GENESIS</b></u><br />
+<b>1.</b> <A HREF="localhost:<%= bypass_port %>/chapter-1-dark-satanic-mills/">Dark Satanic Mills</A><br />
+(Interlude א: <A HREF="localhost:<%= bypass_port %>/interlude-%D7%90-the-cracks-in-the-sky/">The Cracks In The Sky</A>)<br />
+<b>2.</b> <A HREF="localhost:<%= bypass_port %>/chapter-2-arise-to-spiritual-strife/">Arise To Spiritual Strife</A><br />
+(Interlude ב: <A HREF="localhost:<%= bypass_port %>/interlude-%D7%91-the-code-of-the-world/">The Code of the World</A>)<br />
+<b>3.</b> <A HREF="localhost:<%= bypass_port %>/chapter-3-on-a-cloud-i-saw-a-child/">On A Cloud I Saw A Child</A><br />
+<b>4.</b> <A HREF="localhost:<%= bypass_port %>/chapter-4-tools-were-made-and-born-were-hands/">Tools Were Made And Born Were Hands</A><br />
+<b>5.</b> <A HREF="localhost:<%= bypass_port %>/chapter-5-never-seek-to-tell-thy-love/">Never Seek To Tell Thy Love</A><br />
+(Interlude ג: <A HREF="localhost:<%= bypass_port %>/interlude-%D7%92-cantors-and-singers/">Cantors and Singers</A>)<br />
+<b>6.</b> <A HREF="localhost:<%= bypass_port %>/chapter-6-till-we-have-built-jerusalem/">Till We Have Built Jerusalem</A><br />
+<b>7.</b> <A HREF="localhost:<%= bypass_port %>/chapter-7-the-perishing-vegetable-memory/">The Perishing Vegetable Memory</A><br />
+<b>8.</b> <A HREF="localhost:<%= bypass_port %>/chapter-8-laughing-to-scorn-thy-laws-and-terrors/">Laughing To Scorn Thy Laws And Terrors</A><br />
+<b>9.</b> <A HREF="localhost:<%= bypass_port %>/chapter-9-with-art-celestial/">With Art Celestial</A><br />
+<b>10.</b> <A HREF="localhost:<%= bypass_port %>/chapter-10-bring-the-swift-arrows-of-light/">Bring The Swift Arrows Of Light</A><br />
+(Interlude ד: <A HREF="localhost:<%= bypass_port %>/interlude-%D7%93-n-grammata/">N-Grammata</A>)<br />
+<b>11.</b> <A HREF="localhost:<%= bypass_port %>/chapter-11-drive-the-just-man-into-barren-climes/">Drive The Just Man Into Barren Climes</A><br />
+(Interlude ה: <A HREF="localhost:<%= bypass_port %>/interlude-%D7%94-the-right-hand-of-god/">The Right Hand Of God</A>)<br />
+<b>12.</b> <A HREF="localhost:<%= bypass_port %>/chapter-12-borne-on-angels-wings/">Borne On Angels&#8217; Wings</A><br />
+(Interlude ו: <A HREF="localhost:<%= bypass_port %>/interlude-ו-theres-a-hole-in-my-bucket">There&#8217;s A Hole In My Bucket</A>)<br />
+<b>13.</b> <A HREF="localhost:<%= bypass_port %>/chapter-13-the-image-of-eternal-death/">The Image Of Eternal Death</A><br />
+<b>14.</b> <A HREF="localhost:<%= bypass_port %>/chapter-14-cruelty-has-a-human-heart/">Cruelty Has A Human Heart</A><br />
+<b>15.</b> <A HREF="localhost:<%= bypass_port %>/chapter-15-o-where-shall-i-hide-my-face/">O Where Shall I Hide My Face</A><br />
+<b>16.</b> <A HREF="localhost:<%= bypass_port %>/chapter-16-if-perchance-with-iron-power-he-might-avert-his-own-despair/">If Perchance With Iron Power He Might Avert His Own Despair</A><br />
+(Interlude ז: <A HREF="localhost:<%= bypass_port %>/interlude-%D7%96-man-on-the-sphere/">Man On The Sphere</A>)</p>
+<p><u><b>BOOK II<A HREF="localhost:<%= bypass_port %>/book-2-exodus/">:</A> EXODUS</b></u><br />
+<b>17.</b> <A HREF="localhost:<%= bypass_port %>/chapter-18-no-earthly-parents-i-confess/">No Earthly Parents I Confess</A><br />
+<b>18.</b> <A HREF="localhost:<%= bypass_port %>/chapter-17-that-the-children-of-jerusalem-may-be-saved-from-slavery/">That The Children Of Jerusalem May Be Saved From Slavery</A><br />
+<b>19.</b> <A HREF="localhost:<%= bypass_port %>/chapter-19-the-form-of-the-angelic-land/">The Form Of The Angelic Land</A><br />
+<b>20.</b> <A HREF="localhost:<%= bypass_port %>/chapter-20-when-the-stars-threw-down-their-spears/">When The Stars Threw Down Their Spears</A><br />
+<b>21.</b> <A HREF="localhost:<%= bypass_port %>/chapter-21-thou-also-dwellest-in-eternity/">Thou Also Dwellest In Eternity</A><br />
+(Interlude ח: <A HREF="localhost:<%= bypass_port %>/interlude-%D7%97-war-and-peace/">War And Peace</A>)<br />
+<b>22.</b> <A HREF="localhost:<%= bypass_port %>/chapter-22-whose-ears-have-heard-the-holy-word/">Whose Ears Have Heard The Holy Word</A><br />
+<b>23.</b> <A HREF="localhost:<%= bypass_port %>/chapter-23-now-descendeth-out-of-heaven-a-city/">Now Descendeth Out Of Heaven A City</A><br />
+(Interlude ט: <A HREF="localhost:<%= bypass_port %>/interlude-%D7%98-the-general-assembly/">The General Assembly</A>)<br />
+<b>24.</b> <A HREF="localhost:<%= bypass_port %>/chapter-24-why-dost-thou-come-to-angels-eyes/">Why Dost Thou Come To Angels&#8217; Eyes</A><br />
+<b>25.</b> <A HREF="localhost:<%= bypass_port %>/chapter-25-lie-down-before-my-feet-o-dragon/">Lie Down Before My Feet, O Dragon</A><br />
+(Interlude י: <A HREF="localhost:<%= bypass_port %>/interlude-%D7%99-the-broadcast/">The Broadcast</A>)<br />
+<b>26.</b> <A HREF="localhost:<%= bypass_port %>/chapter-26-for-not-one-sparrow-can-suffer-and-the-whole-universe-not-suffer-also/">For Not One Sparrow Can Suffer And The Whole Universe Not Suffer Also</A><br />
+(Interlude כ: <A HREF="localhost:<%= bypass_port %>/interlude-%D7%9B-the-outer-gate/">The Outer Gate</A>)<br />
+<b>27.</b> <A HREF="https://unsongbook.com/chapter-27-the-starry-floor-the-watery-shore/">The Starry Floor, The Watery Shore</A><br />
+<b>28.</b> <A HREF="localhost:<%= bypass_port %>/chapter-28-hid-as-in-an-ark/">Hid As In An Ark</A><br />
+(Interlude ל: <A HREF="localhost:<%= bypass_port %>/interlude-%D7%9C-new-york-city/">New York City</A>)<br />
+<b>29:</b> <A HREF="localhost:<%= bypass_port %>/chapter-29-he-who-respects-the-infants-faith/">He Who Respects The Infant&#8217;s Faith</A><br />
+<b>30:</b> <A HREF="localhost:<%= bypass_port %>/chapter-30-over-the-dark-deserts/">Over The Dark Deserts</A><br />
+<b>31:</b> <A HREF="https://unsongbook.com/chapter-31-the-foundation-of-empire/">The Foundation Of Empire</A><br />
+<b>32.</b> <A HREF="localhost:<%= bypass_port %>/chapter-32-the-human-form-divine/">The Human Form Divine</A><br />
+<b>33.</b> <A HREF="localhost:<%= bypass_port %>/chapter-33-the-doors-of-perception/">The Doors Of Perception</A><br />
+<b>34.</b> <A HREF="localhost:<%= bypass_port %>/chapter-34-why-wilt-thou-rend-thyself-apart-jerusalem/">Why Wilt Thou Rend Thyself Apart, Jerusalem</A><br />
+<b>35.</b> <A HREF="localhost:<%= bypass_port %>/chapter-35-the-voices-of-children-in-his-tents/">The Voices Of Children In His Tents</A><br />
+<b>36.</b> <A HREF="localhost:<%= bypass_port %>/chapter-36-my-fathers-business/">My Father&#8217;s Business</A><br />
+(Interlude מ: <A HREF="localhost:<%= bypass_port %>/interlude-%D7%9E-miss-american-pie/">Miss American Pie</A>)<br />
+<b>37.</b> <A HREF="localhost:<%= bypass_port %>/chapter-37-love-that-never-told-can-be/">Love That Never Told Can Be</A><br />
+<b>38.</b> <A HREF="localhost:<%= bypass_port %>/chapter-38-i-will-not-cease-from-mental-fight/">I Will Not Cease From Mental Fight</A><br />
+<b>39.</b> <A HREF="localhost:<%= bypass_port %>/chapter-39-fearful-symmetry/">Fearful Symmetry</A><br />
+<b>40.</b> <A HREF="localhost:<%= bypass_port %>/chapter-40-in-terrible-majesty/">In Terrible Majesty</A></p>
+<p>New chapters every Sunday, new interludes <i>some</i> Wednesdays.<br />
+If you like this story, you can <A HREF="http://topwebfiction.com/vote.php?for=unsong">vote for it on topwebfiction</A> once per day.</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-7" class="share-twitter sd-button share-icon" href="localhost:<%= bypass_port %>/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-7" class="share-facebook sd-button share-icon" href="localhost:<%= bypass_port %>/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div>																	</div><!-- .pjgm-postcontent -->
+				</div><!-- #post-## -->
+
+				
+
+	<p class="nocomments">Comments are closed.</p>
+
+
+
+
+			</div><!-- #pjgm-content -->
+		</div><!-- #pjgm-box -->
+
+	<!--
+		<div id="left-sidebar" class="widget-area" role="complementary">
+			<a class="sidebar-toggle" title="Expand Sidebar"><i class="fa fa-angle-double-left"></i><i class="fa fa-angle-double-right"></i></a>
+			<ul class="xoxo">
+									</ul>
+		</div>
+-->
+		<div id="primary" class="widget-area" role="complementary">
+			<a class="sidebar-toggle" title="Expand Sidebar"><i class="fa fa-angle-double-left"></i><i class="fa fa-angle-double-right"></i></a>
+			<ul class="xoxo">
+			<li id="blog_subscription-2" class="widget-container jetpack_subscription_widget"><h3 class="widget-title">Subscribe via Email</h3>
+			<form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2">
+				<div id="subscribe-text"><p>Enter your email address to subscribe and receive notifications of new chapters by email.</p>
+</div>					<p id="subscribe-email">
+						<label id="jetpack-subscribe-label" for="subscribe-field-blog_subscription-2">
+							Email Address						</label>
+						<input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-2" placeholder="Email Address" />
+					</p>
+
+					<p id="subscribe-submit">
+						<input type="hidden" name="action" value="subscribe" />
+						<input type="hidden" name="source" value="localhost:<%= bypass_port %>/" />
+						<input type="hidden" name="sub-type" value="widget" />
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-2" />
+												<input type="submit" value="Subscribe" name="jetpack_subscriptions_widget" />
+					</p>
+							</form>
+
+			<script>
+			/*
+			Custom functionality for safari and IE
+			 */
+			(function( d ) {
+				// In case the placeholder functionality is available we remove labels
+				if ( ( 'placeholder' in d.createElement( 'input' ) ) ) {
+					var label = d.querySelector( 'label[for=subscribe-field-blog_subscription-2]' );
+						label.style.clip 	 = 'rect(1px, 1px, 1px, 1px)';
+						label.style.position = 'absolute';
+						label.style.height   = '1px';
+						label.style.width    = '1px';
+						label.style.overflow = 'hidden';
+				}
+
+				// Make sure the email value is filled in before allowing submit
+				var form = d.getElementById('subscribe-blog-blog_subscription-2'),
+					input = d.getElementById('subscribe-field-blog_subscription-2'),
+					handler = function( event ) {
+						if ( '' === input.value ) {
+							input.focus();
+
+							if ( event.preventDefault ){
+								event.preventDefault();
+							}
+
+							return false;
+						}
+					};
+
+				if ( window.addEventListener ) {
+					form.addEventListener( 'submit', handler, false );
+				} else {
+					form.attachEvent( 'onsubmit', handler );
+				}
+			})( document );
+			</script>
+				
+</li>		<li id="recent-posts-2" class="widget-container widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="localhost:<%= bypass_port %>/chapter-40-in-terrible-majesty/">Chapter 40: In Terrible Majesty</a>
+						</li>
+					<li>
+				<a href="localhost:<%= bypass_port %>/chapter-39-fearful-symmetry/">Chapter 39: Fearful Symmetry</a>
+						</li>
+					<li>
+				<a href="localhost:<%= bypass_port %>/chapter-38-i-will-not-cease-from-mental-fight/">Chapter 38: I Will Not Cease From Mental Fight</a>
+						</li>
+					<li>
+				<a href="localhost:<%= bypass_port %>/chapter-37-love-that-never-told-can-be/">Chapter 37: Love That Never Told Can Be</a>
+						</li>
+					<li>
+				<a href="localhost:<%= bypass_port %>/authors-note-5-san-francisco-polytopes-divine-cars/">Author’s Note 5: San Francisco, Polytopes, Divine Cars</a>
+						</li>
+				</ul>
+		</li>		<li id="recent-comments-2" class="widget-container widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">dsotm</span> on <a href="localhost:<%= bypass_port %>/chapter-40-in-terrible-majesty/#comment-21872">Chapter 40: In Terrible Majesty</a></li><li class="recentcomments"><span class="comment-author-link">Sniffnoy</span> on <a href="localhost:<%= bypass_port %>/chapter-40-in-terrible-majesty/#comment-21871">Chapter 40: In Terrible Majesty</a></li><li class="recentcomments"><span class="comment-author-link">The coment king</span> on <a href="localhost:<%= bypass_port %>/chapter-40-in-terrible-majesty/#comment-21870">Chapter 40: In Terrible Majesty</a></li><li class="recentcomments"><span class="comment-author-link">dsotm</span> on <a href="localhost:<%= bypass_port %>/chapter-40-in-terrible-majesty/#comment-21869">Chapter 40: In Terrible Majesty</a></li><li class="recentcomments"><span class="comment-author-link">anon</span> on <a href="localhost:<%= bypass_port %>/chapter-40-in-terrible-majesty/#comment-21868">Chapter 40: In Terrible Majesty</a></li></ul></li><li id="meta-2" class="widget-container widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="https://unsongbook.com/wp-login.php">Log in</a></li>
+			<li><a href="localhost:<%= bypass_port %>/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="localhost:<%= bypass_port %>/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+			</li>			</ul>
+		</div><!-- #primary .widget-area -->	</div><!-- #pjgm-main -->
+	<div id="pjgm-footer">
+		<div id="pjgm-ender">
+				<a href="/amazon" title="Semantic Personal Publishing Platform" rel="generator">
+					Part of Amazon affiliate program				</a>
+				<a href="http://www.hulozila.com/" title="Hulozila" rel="designer"> </a>
+		</div><!-- #pjgm-ender -->		
+	</div><!-- #pjgm-footer -->
+</div><!-- #pjgm-wrap -->
+	<div style="display:none">
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"http:\/\/unsongbook.com\/":7};
+	</script>
+		<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+		<script type='text/javascript' src='localhost:<%= bypass_port %>/wp-includes/js/comment-reply.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='localhost:<%= bypass_port %>/wp-content/plugins/jetpack/modules/photon/photon.js?ver=20130122'></script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201640'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2016Octaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='localhost:<%= bypass_port %>/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.6.1'></script>
+<script type='text/javascript' src='localhost:<%= bypass_port %>/wp-includes/js/wp-embed.min.js?ver=4.6.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='localhost:<%= bypass_port %>/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=4.1.1'></script>
+<script type='text/javascript' src='http://stats.wp.com/e-201640.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:4.1.1',blog:'104551399',post:'7',tz:'-4',srv:'unsongbook.com'} ]);
+	_stq.push([ 'clickTrackerInit', '104551399', '7' ]);
+</script>
+<script src="https://bakkot.github.io/SlateStarComments/ssc.js"></script>
+</body>
+
+<script>
+	
+  jQuery( function() {
+	/*  Sidebar collapse
+	/* ------------------------------------ */
+		jQuery('body').addClass('s1-collapse');
+		jQuery('body').addClass('s2-collapse');
+	
+		jQuery('#primary .sidebar-toggle').click(function(){
+			jQuery('body').toggleClass('s1-collapse').toggleClass('s1-expand');
+			if (jQuery('body').is('.s2-expand')) { 
+				jQuery('body').toggleClass('s2-expand').toggleClass('s2-collapse');
+			}
+		});
+		jQuery('#left-sidebar .sidebar-toggle').click(function(){
+			jQuery('body').toggleClass('s2-collapse').toggleClass('s2-expand');
+			if (jQuery('body').is('.s1-expand')) { 
+				jQuery('body').toggleClass('s1-expand').toggleClass('s1-collapse');
+			}
+		});
+  });
+</script>
+</html>

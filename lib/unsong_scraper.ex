@@ -16,7 +16,7 @@ defmodule UnsongScraper do
     response = HTTPotion.get(link)
     html_tree = Floki.parse(response.body)
     ch_links = find_ch_links(html_tree)
-    ch_texts = Enum.map(ch_links, &scrape_ch/1)
+    ch_texts = pmap(ch_links, &scrape_ch/1)
     ch_texts
   end
 
@@ -38,7 +38,6 @@ defmodule UnsongScraper do
     IO.puts link
     response = HTTPotion.get(link)
     html_tree = Floki.parse(response.body)
-    IO.puts(html_tree)
     text = extract_text(html_tree)
     slice_head(text)
   end
@@ -74,11 +73,17 @@ defmodule UnsongScraper do
   end
 
   def extract_text(phtml) do
-    Floki.find(phtml, ".entry-content")
+    Floki.find(phtml, ".pjgm-postcontent")
     |> hd()
     |> Floki.find("p")
     |> Floki.filter_out("a")
     |> Floki.raw_html()
+  end
+
+  def pmap(collection, function) do
+    collection
+      |> Enum.map(&Task.async(fn -> function.(&1) end))
+      |> Enum.map(&Task.await(&1))
   end
 
   def print_list(list) do
