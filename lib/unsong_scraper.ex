@@ -1,10 +1,12 @@
 defmodule UnsongScraper do
   @toc "http://unsongbook.com"
-  @out "unsong.html"
+  @out_html "unsong.html"
+  @out "unsong-elixir.mobi"
 
   def main do
     book_html = scrape_toc(@toc)
-    write_book(book_html, @out)
+    write_book(book_html, @out_html)
+    convert_book(@out_html, @out)
     :ok
   end
 
@@ -20,7 +22,10 @@ defmodule UnsongScraper do
     if length(ch_links) == 0 do
       raise "No chapters found in table of contents"
     end
-    ch_texts = pmap(ch_links, &scrape_ch/1)
+    ch_texts =
+      pmap(ch_links, &scrape_ch/1)
+      |> to_string()
+    ch_texts = ~s("<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8" /><title>Unsong</title>") <> ch_texts
     ch_texts
   end
 
@@ -37,10 +42,17 @@ defmodule UnsongScraper do
     end
   end
 
+  def convert_book(html_file, mobi_file) do
+    cmd = ~c(ebook-convert #{html_file} #{mobi_file} --authors "Scott Alexander" --title "Unsong-Elixir" --max-toc-links 500)
+    :os.cmd(cmd)
+  end    
+  
   def scrape_ch(link) do
     IO.puts link
     response = HTTPotion.get(link)
-    html_tree = Floki.parse(response.body)
+    html_tree = response.body
+      |> Floki.parse()
+      |> Floki.filter_out("img")
     text = extract_text(html_tree)
     # slice_head(text)
     text
