@@ -1,5 +1,5 @@
 defmodule UnsongScraper do
-  @toc "https://unsongbook.com"
+  @toc "http://unsongbook.com"
   @out "unsong.html"
 
   def main do
@@ -13,9 +13,13 @@ defmodule UnsongScraper do
   end
 
   def scrape_toc(link) do
+    IO.puts "Scraping..."
     response = HTTPotion.get(link)
     html_tree = Floki.parse(response.body)
     ch_links = find_ch_links(html_tree)
+    if length(ch_links) == 0 do
+      raise "No chapters found in table of contents"
+    end
     ch_texts = pmap(ch_links, &scrape_ch/1)
     ch_texts
   end
@@ -24,22 +28,22 @@ defmodule UnsongScraper do
     file = File.open! output, [:write]
     try do
       IO.binwrite file, book_html
-      IO.puts(Process.info(file, :status))
-      # Todo learn enough about processes to figure out how to write
+      # IO.puts(Process.info(file, :status))
+      # Todo learn enough about processes to figure out how to wait on write
       Process.sleep(1000)
-      IO.puts(Process.info(file, :status))
+      # IO.puts(Process.info(file, :status))
     after
       File.close file
     end
   end
 
   def scrape_ch(link) do
-    IO.puts "hi1"
     IO.puts link
     response = HTTPotion.get(link)
     html_tree = Floki.parse(response.body)
     text = extract_text(html_tree)
-    slice_head(text)
+    # slice_head(text)
+    text
   end
 
   def find_ch_links(html_tree) do
