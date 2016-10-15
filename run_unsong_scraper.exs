@@ -1,1 +1,1 @@
-IO.puts UnsongScraper.main
+IO.puts UnsongScraper.refresh_unsong

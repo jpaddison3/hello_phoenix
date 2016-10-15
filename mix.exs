@@ -42,7 +42,7 @@ defmodule HelloPhoenix.Mixfile do
      {:floki, "~> 0.10.1"},
      {:bypass, "~> 0.5", only: :test}]
   end
-  # JP added httpotion
+  # JP added httpotion and below
   # Aliases are shortcuts or tasks specific to the current project.
   # For example, to create, migrate and run the seeds file at once:
   #

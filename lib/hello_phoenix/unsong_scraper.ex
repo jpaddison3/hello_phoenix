@@ -1,13 +1,36 @@
-defmodule UnsongScraper do
+defmodule HelloPhoenix.UnsongScraper do
+  use GenServer
+
   @toc "http://unsongbook.com"
   @out_html "unsong.html"
-  @out "unsong-elixir.mobi"
+  @out "web/static/assets/books/unsong.mobi"
+  @hour 60 * 60 * 1000
+  @check_period 1 * @hour
 
+  @doc "Checks for updates every @check_period and refreshes if there are updates"
   def main do
+    if check_for_updates do
+      refresh_unsong
+    end
+    :timer.sleep(@check_period)
+    main
+  end
+
+  def check_for_updates do
+    true
+  end
+
+  @doc "Re-scrape unsong; replaces old @out .mobi file with a new one"
+  def refresh_unsong do
     book_html = scrape_toc(@toc)
     write_book(book_html, @out_html)
     convert_book(@out_html, @out)
     :ok
+  end
+
+  def start_link do
+    GenServer.start_link(__MODULE__, :ok, [])
+    main
   end
 
   def read_book(file) do
@@ -45,8 +68,8 @@ defmodule UnsongScraper do
   def convert_book(html_file, mobi_file) do
     cmd = ~c(ebook-convert #{html_file} #{mobi_file} --authors "Scott Alexander" --title "Unsong-Elixir" --max-toc-links 500)
     :os.cmd(cmd)
-  end    
-  
+  end
+
   def scrape_ch(link) do
     IO.puts link
     response = HTTPotion.get(link)
@@ -80,7 +103,7 @@ defmodule UnsongScraper do
       href_tree
       |> Floki.raw_html()
     match = Regex.named_captures(~r{"(?<link>https?://.*\..*|localhost:.*/.*)"}, raw)
-    link = 
+    link =
       case match do
         %{"link" => l} -> l
         _ -> ""
